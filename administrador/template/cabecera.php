@@ -42,9 +42,8 @@ if(!isset($_SESSION["usuario"])){
             <!-- <a class="nav-item nav-link" href="<?php echo $url; ?>/administrador/secciones/productos.php">Productos</a> -->
             <!-- <a class="nav-item nav-link" href="<?php echo $url; ?>/administrador/secciones/usuarios.php">Usuarios</a> -->
             <!-- <a class="nav-item nav-link" href="<?php echo $url; ?>">Ver página principal</a> -->
-            <a class="nav-item nav-link" href="<?php echo $url; ?>../administrador/apartados/cerrarSesion.php">Cerrar sesión</a>
+            <a class="nav-item nav-link" href="cerrarSesion.php">Cerrar sesión</a>
         </div>
     </nav>
-    <br>
     <div class="container-fluid">
         <div class="row">

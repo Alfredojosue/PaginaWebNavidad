@@ -16,14 +16,18 @@ $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 <div class="wrapper">
     <ul class="nav justify-content-end">
         <li class="nav-item">
+        <a  class="nav-link link-light" href="/carrito/verCarrito.php">
+            
+                <p class="h5">Carrito</p>
+            </a>
+        </li>
+        <!-- <li>
             <a class="nav-link link-light" href="index.php">
                 <p class="h5">Regresar</p>
             </a>
-        </li>
+        </li> -->
     </ul>
 </div>
-<br>
-<br>
 <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
     <div class="container-sm w-50 p-2 rounded p-3 mb-5">
         <div class="input-group">
@@ -37,13 +41,12 @@ $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 <!-- <div class="fav" style="text-align: right;width:1300px ">
     <a href="carrito/verCarrito.php"><button class="btn" style="color: black;"><i class="fa-solid fa-cart-shopping"></i> carrito</button></a>
 </div> -->
-<br><br><br>
 <?php foreach ($listaProductos as $productos) { ?>
     <div class="col-md-3 p-3">
-            <div class="card">
+        <div class="card">
                 <img class="card-img-top img-thumbnail rounded" src="../img/<?php echo $productos["imagenProducto"]; ?>"
                     alt="Imagen Producto">
-                <div class="card-body">
+            <div class="card-body">
                     <h4 class="card-title" name="nombreProducto" style="text-align:center;">
                         <?php echo $productos["nombreProducto"]; ?>
                     </h4>
@@ -56,15 +59,13 @@ $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                     <p class="card-text" name="precioProducto" style="text-align: center;">Precio:
                         <?php echo $productos["precioProducto"]; ?>
                     </p>
-                    <!-- <center>
-                    <a class="btn btn-success" href="?>"
-                    >Agregar al carrito</a>
-                    </center> -->
-                </div>
-                <div class="card-footer text-muted">
-                    <p class="card-text" style="text-align: center;">Producto en Stock</p>
-                </div>
-            </div>        
-    </div>
-    
+                    <center>
+                    <a class="btn btn-success btn-sm" href="?>">Agregar al carrito</a>
+                    </center>
+            </div>
+                    <div class="card-footer text-muted">
+                        <p class="card-text" style="text-align: center;">Producto en Stock</p>
+                    </div>
+        </div>        
+    </div>  
 <?php } ?>

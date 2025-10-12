@@ -3,7 +3,7 @@ session_start();
 $host = "localhost";
 $usuario = "root";
 $clave = "";
-$bd = "sitio_plantas";
+$bd = "pagweb_navidad";
 
 $conexion = mysqli_connect($host, $usuario, $clave, $bd);
 
