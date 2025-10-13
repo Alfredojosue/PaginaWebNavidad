@@ -1,9 +1,9 @@
 <?php
 // initializ shopping cart class
-include 'el-carrito.php';
+include 'elCarrito.php';
 $cart = new Cart;
 ?>
-<?php include('../templates/cabeceraCarrito.php'); ?>
+<?php include('templates/cabeceraCarrito.php'); ?>
 <div class="container-sm border border-success">
     <div class="panel panel-default">
         <div class="panel-body">
@@ -13,7 +13,7 @@ $cart = new Cart;
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Planta</th>
+                            <th>Articulo</th>
                             <th>Precio</th>
                             <th>Cantidad</th>
                             <th>Sub total</th>
@@ -79,5 +79,5 @@ $cart = new Cart;
             </div>
         </div>
     </div>
-</div>
-<?php include("../templates/pieCarrito.php"); ?>
+<div>
+<?php include("templates/pieCarrito.php"); ?>

@@ -63,7 +63,7 @@ class Cart {
 		if(!is_array($item) OR count($item) === 0){
 			return FALSE;
 		}else{
-            if(!isset($item['txtID'], $item['txtNombre'], $item['precio'], $item['qty'])){
+            if(!isset($item['idProducto'], $item['nombreProducto'], $item['precioProducto'], $item['qty'])){
                 return FALSE;
             }else{
                 /*
@@ -76,9 +76,9 @@ class Cart {
                     return FALSE;
                 }
                 // prep the price
-                $item['precio'] = (float) $item['precio'];
+                $item['precioProducto'] = (float) $item['precioProducto'];
                 // create a unique identifier for the item being inserted into the cart
-                $rowid = md5($item['txtID']);
+                $rowid = md5($item['idProducto']);
                 // get quantity if it's already there and add it on
                 $old_qty = isset($this->cart_contents[$rowid]['qty']) ? (int) $this->cart_contents[$rowid]['qty'] : 0;
                 // re-create the entry with unique identifier and updated quantity
@@ -121,11 +121,11 @@ class Cart {
 				// find updatable keys
 				$keys = array_intersect(array_keys($this->cart_contents[$item['rowid']]), array_keys($item));
 				// prep the price
-				if(isset($item['precio'])){
-					$item['precio'] = (float) $item['precio'];
+				if(isset($item['precioProducto'])){
+					$item['precioProducto'] = (float) $item['precioProducto'];
 				}
 				// product id & name shouldn't be changed
-				foreach(array_diff($keys, array('txtID', 'txtNombre')) as $key){
+				foreach(array_diff($keys, array('idProducto', 'nombreProducto')) as $key){
 					$this->cart_contents[$item['rowid']][$key] = $item[$key];
 				}
 				// save cart data
@@ -143,13 +143,13 @@ class Cart {
 		$this->cart_contents['total_items'] = $this->cart_contents['cart_total'] = 0;
 		foreach ($this->cart_contents as $key => $val){
 			// make sure the array contains the proper indexes
-			if(!is_array($val) OR !isset($val['precio'], $val['qty'])){
+			if(!is_array($val) OR !isset($val['precioProducto'], $val['qty'])){
 				continue;
 			}
 	 
-			$this->cart_contents['cart_total'] += ($val['precio'] * $val['qty']);
+			$this->cart_contents['cart_total'] += ($val['precioProducto'] * $val['qty']);
 			$this->cart_contents['total_items'] += $val['qty'];
-			$this->cart_contents[$key]['subtotal'] = ($this->cart_contents[$key]['precio'] * $this->cart_contents[$key]['qty']);
+			$this->cart_contents[$key]['subtotal'] = ($this->cart_contents[$key]['precioProducto'] * $this->cart_contents[$key]['qty']);
 		}
 		
 		// if cart empty, delete it from the session

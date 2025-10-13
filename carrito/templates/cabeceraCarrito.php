@@ -17,10 +17,10 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-white bg-primary">
-        <img src="../assets/PlantaMexaS.png" width="50" height="50" class="img-circle" alt="Logo Plantas">
+        <img src="../paginas/assets/marsol.png" width="50" height="50" class="img-circle" alt="">
         <ul class="nav navbar-nav ms-auto me-2 mb-2">
             <li class="nav-item">
-                <a class="nav-link" href="../plantas.php">Plantas</a>
+                <a class="nav-link" href="">Seguir viendo</a>
             </li>
         </ul>
     </nav>
