@@ -63,7 +63,7 @@ $cart = new Cart;
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td><a href="../paginas/productos.php" class="btn btn-warning"><i
+                            <td><a href="../productos.php" class="btn btn-warning"><i
                                         class="glyphicon glyphicon-menu-left"></i> Continuar Comprando</a></td>
                             <td colspan="2"></td>
                             <?php if ($cart->total_items() > 0) { ?>

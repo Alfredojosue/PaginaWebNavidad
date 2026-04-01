@@ -47,7 +47,7 @@ if($_POST){
             <div class="form-03-main">
               <div class="_social_04" style="text-align: left;">
                 <ol>
-                  <li><a href="../../paginas/index.php" class="bi bi-arrow-left"></a></li>
+                  <li><a href="../../index.php" class="bi bi-arrow-left"></a></li>
                   
                
                 </ol>

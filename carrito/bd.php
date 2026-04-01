@@ -1,11 +1,14 @@
-<?php 
-$host = "localhost";
-$bd = "pagweb_navidad";
-$usuario = "root";
-$contrasegna = "";
-try {
-    $conexion = new PDO("mysql:host=$host; dbname=$bd",$usuario,$contrasegna);
-} catch (Exception $ex) {
-    echo $ex->getMessage();
-}
+<?php
+//DB details
+$dbHost = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'pagweb_navidad';
+
+//Create connection and select DB
+$db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+
+if ($db->connect_error) {
+    die("No hay Conexion con la base de datos: " . $db->connect_error);
+} 
 ?>

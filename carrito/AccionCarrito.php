@@ -3,7 +3,7 @@
 include 'elCarrito.php';
 $cart = new Cart;
 // include database configuration file
-include("configuracion.php");
+include("bd.php");
 if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
     if($_REQUEST['action'] == 'addToCart' && !empty($_REQUEST['idProducto'])){
         $productID = $_REQUEST['idProducto'];
@@ -17,7 +17,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
             'qty' => 1
         );
         $insertItem = $cart->insert($itemData);
-        $redirectLoc = $insertItem?'VerCarrito.php':'index.php';
+        $redirectLoc = $insertItem?'carrito.php':'index.php';
         header("Location: ".$redirectLoc);
     }elseif($_REQUEST['action'] == 'updateCartItem' && !empty($_REQUEST['idProducto'])){
         $itemData = array(

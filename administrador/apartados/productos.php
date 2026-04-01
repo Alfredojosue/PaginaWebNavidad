@@ -9,7 +9,8 @@ $precio = (isset($_POST["precioProducto"])) ? $_POST["precioProducto"] : "";
 
 $accion = (isset($_POST['accion'])) ? $_POST['accion'] : "";
 
-include("../config/bd.php");
+include("../../bd.php");
+
 
 switch ($accion) {
     case 'Agregar':

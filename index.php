@@ -2,7 +2,7 @@
 <div class="overlay">
     <h1>CONFIA EN LA MAGIA</h1>
 </div>
-    <div class="logo"><a href="../administrador/apartados/formulario.php"><img src="assets/marsol.png" width="100"
+    <div class="logo"><a href="./administrador/apartados/formulario.php"><img src="assets/marsol.png" width="100"
         height="100" style="margin-left: 8px;" class="rounded" alt="Logo mar&sol"></a>
     </div>
         <div class="wrapper">

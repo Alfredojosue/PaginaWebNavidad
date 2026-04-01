@@ -28,7 +28,7 @@ $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 <?php foreach ($listaProductos as $productos) { ?>
 <div class="col-md-3 p-4">
     <div class="card">
-        <img class="card-img-top img-thumbnail rounded" src="./img/<?php echo $productos["imagenProducto"]; ?>"
+        <img class="card-im" src="./img/<?php echo $productos["imagenProducto"]; ?>"
             alt="Imagen Producto">
         <div class="card-body">
             <h4 name="nombreProducto">
@@ -43,7 +43,7 @@ $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
             <p name="precioProducto" style="text-align: center;">Precio:
                 <?php echo $productos["precioProducto"]; ?>
             </p>
-                <a href="../carrito/carrito.php" class="btn">Agregar al carrito</a>
+                <a href="./carrito/carrito.php" class="btn"><i class="bi bi-cart4"></i> Agregar</a>
         </div>
         <div class="card-footer text-muted">
             <p class="card-text" style="text-align: center;">Producto en Stock</p>

@@ -143,3 +143,46 @@ body:before{
     font-weight: bolder;
     letter-spacing: 12px;
 }
+/*Estilos css para el apartado de prodructos******************/
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400;
+    margin: 0 auto;
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.logo span{
+    color: var(--primary-color );
+}
+.nav-links{
+    display: flex;
+    gap: 2rem;
+
+}
+.nav-links a{
+    position: relative;
+    padding: .5rem 0;
+    transition: var(--transition);
+}
+.nav-links a:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+.nav-links a:hover{
+    color: var(--primary-color);
+}
+nav-links a:hover:after{
+    width: 100px;
+}
