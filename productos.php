@@ -26,7 +26,7 @@ $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
     <a href="carrito/verCarrito.php"><button class="btn" style="color: black;"><i class="fa-solid fa-cart-shopping"></i> carrito</button></a>
 </div> -->
 <?php foreach ($listaProductos as $productos) { ?>
-<div class="col-md-3 p-4">
+<div class="col-md-4 p-4">
     <div class="card">
         <img class="card-im" src="./img/<?php echo $productos["imagenProducto"]; ?>"
             alt="Imagen Producto">
