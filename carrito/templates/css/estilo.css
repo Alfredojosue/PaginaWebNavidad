@@ -1,0 +1,37 @@
+ .parallax{
+    background-image: url("./assets/images/info-bg.jpg");
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+section{
+    text-align: center;
+	width: 50%;
+	min-height: 500px;
+	border: 2px solid rgb(35, 35, 35);
+	padding: 2%;
+	margin:0 auto;
+	margin-left: 2%;
+	margin-top: 50px;
+}
+.producto{
+	width: 23%;
+	height: 220px;
+	background-color: #fafafa;
+	border:1px solid gray;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 1%;
+	margin-top: 1%;
+}
+.producto img{
+	width: 60%;
+	height: 60%;
+	margin:0 auto;
+}

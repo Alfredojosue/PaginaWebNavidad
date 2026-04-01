@@ -17,6 +17,7 @@ $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
     <ul class="nav justify-content-end">
         <li class="nav-item">
         <a  class="nav-link link-light" href="../carrito/verCarrito.php">
+    
                 <p class="h5">Carrito</p>
             </a>
         </li>

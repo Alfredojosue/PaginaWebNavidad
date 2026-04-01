@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitio Web</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="shortcut icon" href="assets/favicon.png">
     <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,13 +17,13 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-white bg-primary">
-        <img src="../paginas/assets/marsol.png" width="50" height="50" class="img-circle" alt="">
+        <img src="../paginas/assets/marsol.png" width="50" height="50" class="img-circle" alt="Logo Plantas">
         <ul class="nav navbar-nav ms-auto me-2 mb-2">
             <li class="nav-item">
-                <a class="nav-link" href="">Seguir viendo</a>
+                <a class="nav-link" href="../paginas/productos.php">Productos</a>
             </li>
         </ul>
     </nav>
     <div class="container">
         <br>
-        <div class="row">
+        <div class="row"></div>

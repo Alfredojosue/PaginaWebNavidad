@@ -29,10 +29,10 @@ $cart = new Cart;
                                 ?>
                                 <tr>
                                     <td>
-                                        <?php echo $item["txtNombre"]; ?>
+                                        <?php echo $item["nombreProducto"]; ?>
                                     </td>
                                     <td>
-                                        <?php echo '$' . $item["precio"] . ' MX'; ?>
+                                        <?php echo '$' . $item["precioProducto"] . ' MX'; ?>
                                     </td>
                                     <td><input type="number" class="form-control text-center"
                                             value="<?php echo $item["qty"]; ?>"
@@ -41,7 +41,7 @@ $cart = new Cart;
                                         <?php echo '$' . $item["subtotal"] . ' MX'; ?>
                                     </td>
                                     <td>
-                                        <a href="AccionCarrito.php?action=removeCartItem&txtID=<?php echo $item["rowid"]; ?>"
+                                        <a href="accionCarrito.php?action=removeCartItem&idProducto=<?php echo $item["rowid"]; ?>"
                                             class="btn btn-danger" onclick="return confirm('¿Desea eliminar?')">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                                 class="bi bi-trash" viewBox="0 0 16 16">
@@ -63,7 +63,7 @@ $cart = new Cart;
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td><a href="../plantas.php" class="btn btn-warning"><i
+                            <td><a href="../paginas/productos.php" class="btn btn-warning"><i
                                         class="glyphicon glyphicon-menu-left"></i> Continuar Comprando</a></td>
                             <td colspan="2"></td>
                             <?php if ($cart->total_items() > 0) { ?>

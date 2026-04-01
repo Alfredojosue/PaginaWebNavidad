@@ -28,7 +28,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
         echo $updateItem?'ok':'err';die;
     }elseif($_REQUEST['action'] == 'removeCartItem' && !empty($_REQUEST['idProducto'])){
         $deleteItem = $cart->remove($_REQUEST['idProducto']);
-        header("Location: verCarrito.php");
+        header("Location: carrito.php");
     }else{
         header("Location: productos.php");
     }
