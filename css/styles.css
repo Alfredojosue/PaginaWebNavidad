@@ -93,7 +93,20 @@ header{
 .nav-link a:hover:after{
     width: 100px;
 }
+/* seccion configuracion*/
+/* .section{
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+} */
 /*  apartado de cards*/
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*se adapata al tipo de ancho de la pantalla en los proyectos*/
+    gap: 2rem;
+    margin-left: 25px; /* Ajusta este valor según la separación deseada */
+   
+}
 .card{
     background-color: var(--card-bg);
     border-radius: 10px;
@@ -102,6 +115,17 @@ header{
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+.card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(108, 99, 255, .5);
+}
+.card-im{
+    overflow: hidden; /* para que no se salga del elemento hijo de hover img*/
+}
+.card-im img {
+    transition: var(--transition);
+    width: 100%;
 }
 .card-body{
     padding: 1.5rem;
