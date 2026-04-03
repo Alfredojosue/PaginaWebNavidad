@@ -94,17 +94,16 @@ header{
     width: 100px;
 }
 /* seccion configuracion*/
-/* .section{
+section{
     padding: 6rem 5%;
     max-width: 1400px;
     margin: 0 auto;
-} */
+}
 /*  apartado de cards*/
 .card-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*se adapata al tipo de ancho de la pantalla en los proyectos*/
-    gap: 2rem;
-    margin-left: 25px; /* Ajusta este valor según la separación deseada */
+    gap: 30px;
    
 }
 .card{
@@ -160,4 +159,18 @@ header{
     background-color: var(--second-color);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(71, 184, 129, 0.5);
+}
+/*para dispositivos moviles , se crea una media query*/
+@media (main-width: 420px){
+    header{
+        position: static;
+    }
+    #navbar{
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .card-container{
+        flex-direction: column;
+    }
 }

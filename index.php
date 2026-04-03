@@ -27,29 +27,28 @@
         <p>Tu mejor aventura comienza aqui, encontrás productos sorprendentes para estas fiestas decembrinas..</p>
         <!-- <button>ADENTRATE EN LA MAGIA</button> -->
     </div>
-<div class="bottom-bar">
-        <div class="container-sm">
-            <div class="row">
-                <div class="col-lg-4">
-                    <h6>Esferas</h6>
-                    <p>Disfrutaras de diversas variedades de esferas, las cuales pueden ser planas, redondas, con un estilo
-                        unico
-                        y 100% artesanales.
-                    </p>
-                </div>
-                <div class="col-lg-4">
-                    <h6>Adornos</h6>
-                    <p>De la vista nace el amor, decora esta navidad a lo grande y disfruta con tu familia</p>
-                </div>
-                <div class="col-lg-4">
-                    <h6>Luces</h6>
-                    <p>Encuenta esa luz que ilumine tu hogar, para que disfrutes en compañia de los que mas amas.</p>
+    <div class="bottom-bar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h6>Esferas</h6>
+                        <p>Disfrutaras de diversas variedades de esferas, las cuales pueden ser planas, redondas, con un estilo
+                            unico
+                            y 100% artesanales.
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h6>Adornos</h6>
+                        <p>De la vista nace el amor, decora esta navidad a lo grande y disfruta con tu familia</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h6>Luces</h6>
+                        <p>Encuenta esa luz que ilumine tu hogar, para que disfrutes en compañia de los que mas amas.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 
 <script type="text/javascript">
 //Overlay es la frase que aparece al momento de llegar a la pagina

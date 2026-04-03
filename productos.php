@@ -45,7 +45,7 @@ $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                 <p name="precioProducto" style="text-align: center;">Precio:
                     <?php echo $productos["precioProducto"]; ?>
                 </p>
-                <a href="./carrito/carrito.php" class="btn"><i class="bi bi-cart4"></i> Agregar</a>
+                <a href="./carrito/accionCarrito.php?action=addToCart&idProducto=<?php echo $productos["idProducto"];?>" class="btn"><i class="bi bi-cart4"></i> Agregar</a>
             </div>
             <div class="card-footer text-muted">
                 <p class="card-text" style="text-align: center;">Producto en Stock</p>
