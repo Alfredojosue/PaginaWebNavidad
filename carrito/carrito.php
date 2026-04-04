@@ -69,8 +69,9 @@ $cart = new Cart;
                                 <td class="text-center"><strong>Total
                                         <?php echo '$' . $cart->total() . ' MX'; ?>
                                     </strong></td>
-                                <td><a href="../index.php" class="btn btn-success btn-block">Pagar<i
-                                            class="glyphicon glyphicon-menu-right"></i></a></td>
+                                <td>
+                                    <a href="enviar.php" class="btn btn-success btn-block">Enviar a whatsapp <i class="bi bi-whatsapp"></i></a>
+                                </td>
                                 <?php } ?>
                             </tr>
                         </tfoot>

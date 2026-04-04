@@ -3,10 +3,9 @@
 
 $txtID = (isset($_POST['idProducto'])) ? $_POST['idProducto'] : "";
 $txtNombre = (isset($_POST['nombreProducto'])) ? $_POST['nombreProducto'] : "";
-$txtImagen = (isset($_FILES['imagenProducto']['name'])) ? $_FILES['imagenProducto']['name'] : "";
 $txtDescripcion = (isset($_POST['descripcionProducto'])) ? $_POST['descripcionProducto'] : "";
 $precio = (isset($_POST["precioProducto"])) ? $_POST["precioProducto"] : "";
-
+$txtImagen = (isset($_FILES['imagenProducto']['name'])) ? $_FILES['imagenProducto']['name'] : "";
 $accion = (isset($_POST['accion'])) ? $_POST['accion'] : "";
 
 include("../../bd.php");
@@ -14,8 +13,7 @@ include("../../bd.php");
 
 switch ($accion) {
     case 'Agregar':
-        $txtID = (isset($_POST['idProducto'])) ? $_POST['idProducto'] : "";
-        $sentenciaSQL = $conexion->prepare("INSERT INTO productos (idProducto, nombreProducto, imagenProducto, descripcionProducto) VALUES (:nombre, :imagen, :descripcion , :precio);");
+        $sentenciaSQL = $conexion->prepare("INSERT INTO productos (nombreProducto, imagenProducto, descripcionProducto, precioProducto) VALUES (:nombre, :imagen, :descripcion , :precio);");
         $sentenciaSQL->bindParam(':nombre', $txtNombre);
         $sentenciaSQL->bindParam(':descripcion', $txtDescripcion);
         $sentenciaSQL->bindParam(':precio', $precio);
@@ -186,7 +184,7 @@ $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                     </td>
                     <td>
                         <img class="img-thumbnail rounded" src="../../img/<?php echo $producto['imagenProducto']; ?>"
-                            width="50" alt="Imagen Planta">
+                            width="50" alt="Imagen">
                     </td>
                     <td>
                         <?php echo $producto['descripcionProducto']; ?>
