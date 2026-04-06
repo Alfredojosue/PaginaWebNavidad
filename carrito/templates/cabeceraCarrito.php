@@ -42,7 +42,7 @@
     <nav id="navbar">
         <div class="logo">Mar<span>&Sol</span></div>
         <ul class="nav-link">
-            <li><a href="../productos.php">Regresar</a></li>
+            <li><a href="../productos.php"><i class="bi bi-caret-left"></i>Regresar</a></li>
         </ul>
     </nav>
 </header>

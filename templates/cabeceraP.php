@@ -36,13 +36,24 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <header>
+<!-- //se inica secion start para poder urilizar el contador de prodcutos agregados al carrito -->
+<?php session_start();?> 
     <nav id="navbar">
         <div class="logo">Mar<span>&Sol</span></div>
         <ul class="nav-link">
-            <li><a href="./carrito/carrito.php">Carrito</a></li>
-            <li><a href="index.php">Regresar</a></li>
+            <li><a href="./carrito/carrito.php">Carrito <i class="bi bi-cart4"></i>
+            <span id="contador-cantidad" style="background: red; border-radius: 50%; padding: 2px 6px;">
+            <?php 
+                // Sumar la cantidad total de productos en el carrito
+                echo (isset($_SESSION['cart_contents'])) ? count($_SESSION['cart_contents']) : 0; 
+            ?>
+        </span>
+                </a>
+            </li>
+            <li><a href="index.php"><i class="bi bi-caret-left"></i>Regresar</a></li>
         </ul>
     </nav>
 </header>
 <br><br><br>
+
 <body>
