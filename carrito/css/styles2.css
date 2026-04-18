@@ -1,0 +1,121 @@
+:root{
+    --primary-color:#FCD23B;
+    --second-color:#3D9A6C;
+    --text-card: #0F0F0F;
+    --dark-bg: #121212;
+    --darker-bg:#0a0a0a;
+    --strongGreen-bg: #061B23;
+    --strongBlue-bg:#06231D;
+    --ligth-text: #f5f5f5;
+    --gray-text: #aaaaaa;
+    --card-bg: #48474788;
+    --border-color: #3e3838;
+    --transition: all .3s ease;  /*es para transiciones*/
+}
+/*Estilos generales*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scrollbar-color: var(--gray-text) var(--dark-bg);
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--strongGreen-bg);
+    color: var(--ligth-text);
+    line-height: 1.6;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/*apartado de cabecera estilos*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba (10, 10, 10, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400;
+    margin: 0 auto;
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.logo span{
+    color: var(--primary-color );
+}
+.nav-link{
+    display: flex;
+    gap: 2rem;
+
+}
+.nav-link a{
+    position: relative;
+    padding: .5rem 0;
+    transition: var(--transition);
+}
+.nav-link a:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+.nav-link a:hover{
+    color: var(--primary-color);
+}
+.nav-link a:hover:after{
+    width: 100px;
+}
+.container-box{
+  width:auto;
+  background-color: var(--ligth-text);
+  border-radius: 10px;
+  padding: 50px;
+  margin: 20px;
+}
+.container-body{
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+.container-body p{
+    color: var(--text-card);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: justify;
+    flex-grow: 1;
+}
+.encabezado tr{
+    background-color: rgba(104, 111, 104, .5);
+}
+.encabezado th{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    color: var(--text-card);
+}

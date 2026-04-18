@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- font-awesome iconos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -32,20 +32,28 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- ICONO DE LA PAGINA WEB -->
     <link rel="shortcut icon" href="assets/marsol.png" type="image/x-icon">
-       <!-- hoja de estilos -->
-       <link rel="stylesheet" href="css/styles2.css">
-    <!-- ICONO DE LA PAGINA WEB -->
-    <link rel="shortcut icon" href="assets/marsol.png" type="image/x-icon">
+    <!-- hoja de estilos -->
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
-<br><br><br>
 <header>
+<!-- //se inica secion start para poder urilizar el contador de prodcutos agregados al carrito -->
+<?php session_start();?> 
     <nav id="navbar">
         <div class="logo">Mar<span>&Sol</span></div>
         <ul class="nav-link">
-            <li><a href="../productos.php"><i class="bi bi-caret-left"></i>Regresar</a></li>
+            <li><a href="./carrito/carrito.php">Carrito <i class="bi bi-cart4"></i>
+            <span id="contador-cantidad" style="background: red; border-radius: 50%; padding: 2px 6px;">
+            <?php 
+                // Sumar la cantidad total de productos en el carrito
+                echo (isset($_SESSION['cart_contents'])) ? count($_SESSION['cart_contents']) : 0; 
+            ?>
+        </span>
+                </a>
+            </li>
+            <li><a href="index.php"><i class="bi bi-caret-left"></i>Regresar</a></li>
         </ul>
     </nav>
 </header>
+<br><br><br>
+
 <body>
-
-

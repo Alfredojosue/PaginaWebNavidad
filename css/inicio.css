@@ -26,6 +26,7 @@ body:before{
     font-weight: bolder;
     color: #fff;
     font-size: 18px;
+      flex-direction: column;
 }
 
 .nav{
@@ -66,23 +67,24 @@ body:before{
     letter-spacing: 4px;
 }
 .header{
+    flex-direction: column; /* Stacks logo and nav vertically */
+    text-align: center;
     position: absolute;
     top: 38%;
     left: 46%;
     transform: translate(-50% , -50%);
+    margin-bottom: 2rem;
 }
 
 .header h1 {
     color: #fff;;
     font-weight: bolder;
     font-size: 35px;
-
 }
 .header p{
     color: #fff;
     font-weight: lighter;
     font-size: 17px;
-
 }
 
 .header button{
@@ -105,9 +107,11 @@ body:before{
     bottom: 0px;
     left: 0;
     right: 0;
+    flex-direction: column; /* Stacks logo and nav vertically */
+    text-align: center;
+
 
 }
-
 .row{
     padding: 2.6em 2.6em 2em 2.6em;
     background: #000;
@@ -142,4 +146,39 @@ body:before{
     font-size: 20px;
     font-weight: bolder;
     letter-spacing: 12px;
+}
+/*para dispositivos moviles , se crea una media query*/
+@media (max-width: 992px) {
+    /* Centrar el encabezado y ajustar tamaño */
+    .header {
+        left: 50%;
+        top: 45%;
+        width: 90%; /* Evita que el texto toque los bordes */
+    }
+
+    .header h1 {
+        font-size: 28px; /* Un poco más pequeño para móviles */
+    }
+
+    /* Ocultar o reacomodar la tira lateral y redes sociales si estorban */
+    .side-strip, .social-media {
+        display: none; 
+    }
+
+    /* Convertir el menú en una lista vertical o más compacta */
+    .nav {
+        position: relative;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav ul {
+        padding: 0;
+    }
+
+    .nav ul li {
+        padding: 10px;
+        font-size: 16px;
+    }
 }
