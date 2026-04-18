@@ -148,13 +148,37 @@ body:before{
     letter-spacing: 12px;
 }
 /*para dispositivos moviles , se crea una media query*/
-@media (main-width: 300px){
-    .header{
-        flex-direction: column;     
+@media (max-width: 992px) {
+    /* Centrar el encabezado y ajustar tamaño */
+    .header {
+        left: 50%;
+        top: 45%;
+        width: 90%; /* Evita que el texto toque los bordes */
     }
-    .bottom-bar{
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
+
+    .header h1 {
+        font-size: 28px; /* Un poco más pequeño para móviles */
+    }
+
+    /* Ocultar o reacomodar la tira lateral y redes sociales si estorban */
+    .side-strip, .social-media {
+        display: none; 
+    }
+
+    /* Convertir el menú en una lista vertical o más compacta */
+    .nav {
+        position: relative;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav ul {
+        padding: 0;
+    }
+
+    .nav ul li {
+        padding: 10px;
+        font-size: 16px;
     }
 }

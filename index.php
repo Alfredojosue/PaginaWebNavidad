@@ -24,7 +24,7 @@
     </div> -->
     <div class="header">
         <h1>MAR&SOL - <br>Productos navideños</h1>
-        <p>Tu mejor aventura comienza aqui, encontrás productos sorprendentes para estas fiestas decembrinas..</p>
+        <!-- <p>Tu mejor aventura comienza aqui, encontrás productos sorprendentes para estas fiestas decembrinas..</p> -->
         <!-- <button>ADENTRATE EN LA MAGIA</button> -->
     </div>
     <div class="bottom-bar">
