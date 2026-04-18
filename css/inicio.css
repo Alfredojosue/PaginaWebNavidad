@@ -1,183 +1,114 @@
-html, body {
+
+/* --- ESTILOS GENERALES (BASE) --- */
+body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Poppins !important;
-}
-
-body {
-    background: url(../assets/fondo.jpg) no-repeat 50% 50%;
+    font-family: 'Segoe UI', sans-serif;
+    background: #000; /* Fondo de respaldo */
+    color: #fff;
+    overflow-x: hidden;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('../assets/fondo.jpg') no-repeat center center;
     background-size: cover;
 }
-body:before{
-    content:'';
-	position:absolute;
+
+/* Imagen de fondo responsiva */
+.overlay {
+    position: fixed;
     top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: rgba(0,0,0,0.5);
-} 
-.logo{
-    line-height: 40px;
-    float: left;
-    margin: 1.2em 0 0 2.2em;
-    font-weight: bolder;
-    color: #fff;
-    font-size: 18px;
-      flex-direction: column;
-}
-
-.nav{
-    line-height: 40%;
-    margin: 1.2em;
-    position: absolute;
-    right: 0;
-}
-
-.nav ul li {
-    list-style: none;
-    display: inline-block;
-    color: #fff;
-    padding-right: 36px;
-    font-size: 18px;
-}
-
-.social-media{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.social-media ul li {
-    list-style: none;
-    color: #fff;
-    padding-top: 20px;
-}
-
-.side-strip{
-    position: absolute;
-    font-size: 2vw;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -4em;
-    transform: rotate(90deg);
-    color: #fff;
-    letter-spacing: 4px;
-}
-.header{
-    flex-direction: column; /* Stacks logo and nav vertically */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:white;
+    background-size: cover;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    position: absolute;
-    top: 38%;
-    left: 46%;
-    transform: translate(-50% , -50%);
-    margin-bottom: 2rem;
+}
+
+.overlay h1 {
+    color: #000;
+    font-size: 2rem;
+    /* opacity: 0.2; */
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+/* --- LOGO Y NAV --- */
+.logo {
+    padding: 15px;
+    text-align: center; /* Centrado por defecto en móvil */
+}
+
+.logo img {
+    max-width: 80px; /* Un poco más pequeño en móvil */
+    height: auto;
+}
+
+.wrapper .nav {
+    justify-content: center !important; /* Menú centrado en móvil */
+    margin-bottom: 20px;
+}
+
+/* --- TEXTO PRINCIPAL (HEADER) --- */
+.header {
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .header h1 {
-    color: #fff;;
-    font-weight: bolder;
-    font-size: 35px;
-}
-.header p{
-    color: #fff;
-    font-weight: lighter;
-    font-size: 17px;
+    font-size: 2rem;
+    /* line-height: 1.2; */
+    color: rgb(255, 255, 255)
 }
 
-.header button{
-    margin-top: 12px;
-    border: none;
-    padding: 15px  30px;
-    background: rgb(226, 221, 221);
-    color: #000;
-    letter-spacing: 4px;
-    font-weight: 600;
-    font-size: 12px;
-    border-radius: 2%;
-
-}
-
-.bottom-bar{
-    color: #fff;
-    position: absolute;
-    display:flex;
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    flex-direction: column; /* Stacks logo and nav vertically */
-    text-align: center;
-
-
-}
-.row{
-    padding: 2.6em 2.6em 2em 2.6em;
-    background: #000;
-    border-top-right-radius:12px;
-    border-top-left-radius: 12px;
+/* --- BARRA INFERIOR (TARJETAS) --- */
+.bottom-bar {
+    background: rgba(0, 0, 0, 0.757);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 30px 20px;
+    border-radius: 30px 30px 0 0; /* Curva elegante en el tope */
 }
 
 .bottom-bar h6 {
-    font-weight: bolder;
-    text-transform: uppercase;
+    color: #ffd700; /* Dorado navideño */
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+.bottom-bar p{
+    font-size: 1rem;
+    color: white;
 }
 
-.bottom-bar p {
-    font-size: 14px;
-    font-weight: lighter;
-}
+/* --- MEDIA QUERIES (PARA TABLETS Y PC) --- */
+@media (min-width: 992px) {
+    .logo {
+        text-align: left;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
 
-.overlay {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: #fff;
-    top: 0%;
-}
-.overlay h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    font-weight: bolder;
-    letter-spacing: 12px;
-}
-/*para dispositivos moviles , se crea una media query*/
-@media (max-width: 992px) {
-    /* Centrar el encabezado y ajustar tamaño */
+    .wrapper .nav {
+        justify-content: flex-end !important;
+        padding-right: 30px;
+    }
+
     .header {
-        left: 50%;
-        top: 45%;
-        width: 90%; /* Evita que el texto toque los bordes */
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .header h1 {
-        font-size: 28px; /* Un poco más pequeño para móviles */
+        font-size: 4.5rem;
     }
 
-    /* Ocultar o reacomodar la tira lateral y redes sociales si estorban */
-    .side-strip, .social-media {
-        display: none; 
-    }
-
-    /* Convertir el menú en una lista vertical o más compacta */
-    .nav {
-        position: relative;
-        text-align: center;
-        margin: 0;
-        width: 100%;
-    }
-
-    .nav ul {
-        padding: 0;
-    }
-
-    .nav ul li {
-        padding: 10px;
-        font-size: 16px;
+    .bottom-bar {
+        border-radius: 0;
     }
 }
